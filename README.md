@@ -29,3 +29,6 @@ py -3 main.py
 ```bash
 python3 main.py
 ```
+
+# Additional note:
+Yes this is the repo for the twitch bot for my twitch channel.
