@@ -14,12 +14,14 @@ Yes, this is ready to go! You don't need to credit me because all i did was writ
 
 1. Run `pip install -r requirements.txt`
 2. Go to [this website](https://twitchtokengenerator.com)
-   1. Put the access token in the `TOKEN` field and [run the bot](#how-to-run)
+   1. Put the access token in the `TOKEN` field
+   2. Put your channel name in the `CHANNEL` field and [run the bot](#how-to-run)
 3. Enjoy your knew twitch bot!
 
 ## How to run
 
 ### Windows
+
 ```console
 py -3 main.py
 ```
@@ -31,4 +33,5 @@ python3 main.py
 ```
 
 # Additional note:
+
 Yes this is the repo for the twitch bot for my twitch channel.

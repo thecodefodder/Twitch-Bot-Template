@@ -5,6 +5,7 @@ import requests
 
 load_dotenv()
 client_token = os.getenv('TOKEN')
+channel = [os.getenv('CHANNEL')]
 
 def generateJoke():
     r = requests.get('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,political,racist,sexist')
@@ -23,7 +24,7 @@ class Bot(commands.Bot):
 
     def __init__(self):
         # Initialise our Bot with our access token, prefix and a list of channels to join on boot...
-        super().__init__(token=client_token, prefix='!', initial_channels=['thecodefodder1'])
+        super().__init__(token=client_token, prefix='!', initial_channels=channel)
 
     async def event_ready(self):
         # We are logged in and ready to chat and use commands...
@@ -43,6 +44,7 @@ class Bot(commands.Bot):
     async def joke(self, ctx: commands.Context):
         joke = generateJoke()
         await ctx.send(joke)
+
 
 bot = Bot()
 bot.run()
